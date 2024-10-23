@@ -335,6 +335,8 @@ class HumanizeTests(SimpleTestCase):
             "10311",
             "1000000",
             None,
+            "1234567.1234567",
+            "-1234567.1234567",
         )
         result_list = (
             "100",
@@ -349,6 +351,8 @@ class HumanizeTests(SimpleTestCase):
             "10.311",
             "1.000.000",
             None,
+            "1.234.567,1234567",
+            "-1.234.567,1234567",
         )
         with self.settings(USE_THOUSAND_SEPARATOR=True):
             with translation.override("de"):
